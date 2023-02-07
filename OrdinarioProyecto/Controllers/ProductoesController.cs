@@ -132,7 +132,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(producto);
         }
-        //Accion que nos ayuda a confirmar, si sequiere eliminar el producto
+        //Accion que nos ayuda a confirmar, si se quiere eliminar el producto
         // POST: Productoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -151,7 +151,7 @@ namespace OrdinarioProyecto.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        //Accion que nos permite verificar si nuestro producto existe.
         private bool ProductoExists(int id)
         {
           return _context.Productos.Any(e => e.Id == id);
