@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OrdinarioProyecto.Models.Proveedore>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<h1>Proveedores</h1>
+
+<p>
+    <a class="btn btn-outline-secondary" asp-action="Create">Crear nuevo</a>
+</p>
+
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @foreach (var item in Model)
+            {
+
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="https://img.freepik.com/vector-gratis/fondo-floral-diseno-flores-hojas-suaves_44538-3149.jpg?w=826&t=st=1675648512~exp=1675649112~hmac=d9d77b741386ef33f4143ae35f71ff69753a77347f97a39f4984e92d5a704dff" class="card-img-top" />
+
+                        <div class="card-body">
+
+                            <p class="card-text">Nombre: @Html.DisplayFor(modelItem => item.Nombre)</p>
+                            <p class="card-text">Email: @Html.DisplayFor(modelItem => item.Email)</p>
+                            <p class="card-text">Direccion: @Html.DisplayFor(modelItem => item.Direccion))</p>
+                            <p class="card-text">Telefono:  @Html.DisplayFor(modelItem => item.Telefono)</p>
+                            <p class="card-text">
+                                <a class="btn btn-outline-secondary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

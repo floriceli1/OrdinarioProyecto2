@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OrdinarioProyecto.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<h1>Usuarios</h1>
+
+<p>
+    <a class="btn btn-outline-secondary" asp-action="Create">Crear nuevo</a>
+</p>
+
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @foreach (var item in Model)
+            {
+
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="https://static.vecteezy.com/system/resources/previews/002/002/257/non_2x/beautiful-woman-avatar-character-icon-free-vector.jpg" class="card-img-top" />
+
+                        <div class="card-body">
+
+                            <p class="card-text">Nombre: @Html.DisplayFor(modelItem => item.Nombre)</p>
+                            <p class="card-text">Usuario: @Html.DisplayFor(modelItem => item.Usuario1)</p>
+                            <p class="card-text">Contraseña: @Html.DisplayFor(modelItem => item.Contrasena)</p>
+                            <p class="card-text">Email:  @Html.DisplayFor(modelItem => item.Email)</p>
+                            <p class="card-text">
+                                <a class="btn btn-outline-secondary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

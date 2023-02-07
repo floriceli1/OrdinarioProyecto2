@@ -1,0 +1,48 @@
+﻿@model OrdinarioProyecto.Models.Proveedore
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<hr />
+<div class="card border-primary mb-3">
+
+    <div class="card-header bg-transparent border-primary">
+        <h4>Producto</h4>
+    </div>
+    <div class="card-body text-primary">
+
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Direccion)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Direccion)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Telefono)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+        </dl>
+
+        <div class="card-footer bg-transparent border-primary">
+            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+            <a class="btn btn-outline-secondary" asp-action="Index">Volver a la lista</a>
+        </div>
+    </div>
+</div>
