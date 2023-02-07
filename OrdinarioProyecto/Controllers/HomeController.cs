@@ -22,7 +22,7 @@ namespace OrdinarioProyecto.Controllers
         {
             return View();
         }
-
+        //creacion de la accion para direccionarnos a la pagina de error
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
