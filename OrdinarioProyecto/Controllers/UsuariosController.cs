@@ -25,7 +25,7 @@ namespace OrdinarioProyecto.Controllers
         {
               return View(await _context.Usuarios.ToListAsync());
         }
-
+        //Accion que nos ayuda a ver los detalles de su persona especifica
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
         {

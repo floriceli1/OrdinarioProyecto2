@@ -24,7 +24,7 @@ namespace OrdinarioProyecto.Controllers
         {
               return View(await _context.Proveedores.ToListAsync());
         }
-        //Accion que nos ayuda a ver loss detaales de su persona especila
+        //Accion que nos ayuda a ver los detalles de su persona especifica
         // GET: Proveedores/Details/5
         public async Task<IActionResult> Details(int? id)
         {
