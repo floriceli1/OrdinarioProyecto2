@@ -17,7 +17,7 @@ namespace OrdinarioProyecto.Controllers
         {
             return View();
         }
-
+        //creacion de la accion para direccionarnos a privacy
         public IActionResult Privacy()
         {
             return View();
