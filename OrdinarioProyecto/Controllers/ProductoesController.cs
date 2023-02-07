@@ -6,24 +6,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OrdinarioProyecto.Models;
-
+//creacion ddl controlador de productos
 namespace OrdinarioProyecto.Controllers
 {
     public class ProductoesController : Controller
     {
         private readonly ProyectoContext _context;
-
+        //creacion del metodo context
         public ProductoesController(ProyectoContext context)
         {
             _context = context;
         }
 
-        // GET: Productoes
+        // GET: Productos
         public async Task<IActionResult> Index()
         {
               return View(await _context.Productos.ToListAsync());
         }
-
+        //Accion quenos funciona para direccionarnos a la pagina de detalles
         // GET: Productoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -41,7 +41,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(producto);
         }
-
+        //Accion que nos manda a la pagina crear para crear un producto
         // GET: Productoes/Create
         public IActionResult Create()
         {
