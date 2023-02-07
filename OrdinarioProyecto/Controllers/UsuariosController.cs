@@ -43,7 +43,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(usuario);
         }
-
+        //Accion que nos manda a la pagina crear para crear un usuario
         // GET: Usuarios/Create
         public IActionResult Create()
         {
