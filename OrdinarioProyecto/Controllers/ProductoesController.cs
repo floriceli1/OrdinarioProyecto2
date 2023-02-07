@@ -132,7 +132,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(producto);
         }
-
+        //Accion que nos ayuda a confirmar, si sequiere eliminar el producto
         // POST: Productoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
