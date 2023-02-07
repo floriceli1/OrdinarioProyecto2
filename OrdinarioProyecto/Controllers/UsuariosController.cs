@@ -153,7 +153,7 @@ namespace OrdinarioProyecto.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        //Accion que nos permite verificar si nuestro usuario existe
         private bool UsuarioExists(int id)
         {
           return _context.Usuarios.Any(e => e.Id == id);
