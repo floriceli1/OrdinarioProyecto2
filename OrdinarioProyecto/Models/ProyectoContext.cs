@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace OrdinarioProyecto.Models;
-
+//creacion de la clase context que nos sirve para crear y administrar la instancias
 public partial class ProyectoContext : DbContext
 {
     public ProyectoContext()
