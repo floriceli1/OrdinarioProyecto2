@@ -12,7 +12,7 @@ namespace OrdinarioProyecto.Controllers
         {
             _logger = logger;
         }
-
+        //creacion de la accion para direccionarnos al index
         public IActionResult Index()
         {
             return View();
