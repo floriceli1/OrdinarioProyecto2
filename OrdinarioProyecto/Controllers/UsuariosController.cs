@@ -19,7 +19,7 @@ namespace OrdinarioProyecto.Controllers
         {
             _context = context;
         }
-
+        //Accion que me permite direccionarme al documento index
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
