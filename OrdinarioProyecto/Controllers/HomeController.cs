@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OrdinarioProyecto.Models;
 using System.Diagnostics;
-
+//Controlador de home
 namespace OrdinarioProyecto.Controllers
 {
     public class HomeController : Controller
