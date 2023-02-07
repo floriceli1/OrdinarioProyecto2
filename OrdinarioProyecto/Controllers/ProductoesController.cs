@@ -63,7 +63,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(producto);
         }
-
+        //Accion que nos ayuda a dar direccion y modificacion de nuestro producto
         // GET: Productoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -79,7 +79,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(producto);
         }
-
+        //Accion que nos ayuda a editar nuetro producto
         // POST: Productoes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -114,7 +114,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(producto);
         }
-
+        //Accion que nos permite eliminar nuestro producto
         // GET: Productoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
