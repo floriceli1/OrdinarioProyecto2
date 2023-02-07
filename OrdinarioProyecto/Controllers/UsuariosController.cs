@@ -65,7 +65,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(usuario);
         }
-
+        //Accion que nos ayuda a dar direccion y modificacion de nuestro usuario
         // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
