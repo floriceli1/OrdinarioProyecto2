@@ -134,7 +134,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(usuario);
         }
-
+        //Accion que nos ayuda a confirmar, si se quiere eliminar el usuario
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
