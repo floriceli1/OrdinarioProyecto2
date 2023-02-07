@@ -23,7 +23,7 @@ namespace OrdinarioProyecto.Controllers
         {
               return View(await _context.Productos.ToListAsync());
         }
-        //Accion quenos funciona para direccionarnos a la pagina de detalles
+        //Accion que nos funciona para direccionarnos a la pagina de detalles
         // GET: Productoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {

@@ -42,7 +42,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(proveedore);
         }
-
+        //Accion que nos manda a la pagina crear para crear un proveedor
         // GET: Proveedores/Create
         public IActionResult Create()
         {
