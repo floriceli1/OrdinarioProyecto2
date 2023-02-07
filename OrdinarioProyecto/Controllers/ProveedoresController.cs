@@ -115,7 +115,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(proveedore);
         }
-
+        //Accion que nos permite eliminar nuestro proveedor
         // GET: Proveedores/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
