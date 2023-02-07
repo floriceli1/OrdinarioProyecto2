@@ -64,7 +64,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(proveedore);
         }
-
+        //Accion que nos ayuda a dar direccion y modificacion de nuestro proveedor
         // GET: Proveedores/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
