@@ -9,22 +9,22 @@ using OrdinarioProyecto.Models;
 //creacion ddl controlador de proveedores
 namespace OrdinarioProyecto.Controllers
 {
-    //cracio de la clase de nuestro controlador
+    //creacio de la clase de nuestro controlador
     public class ProveedoresController : Controller
     {
         private readonly ProyectoContext _context;
-
+        //Clase que nos permite utilizar context
         public ProveedoresController(ProyectoContext context)
         {
             _context = context;
         }
-
+        //Accion que me permite direccionarme al documento index
         // GET: Proveedores
         public async Task<IActionResult> Index()
         {
               return View(await _context.Proveedores.ToListAsync());
         }
-
+        //Accion que nos ayuda a ver loss detaales de su persona especila
         // GET: Proveedores/Details/5
         public async Task<IActionResult> Details(int? id)
         {
