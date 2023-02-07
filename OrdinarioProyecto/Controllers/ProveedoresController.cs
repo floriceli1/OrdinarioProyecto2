@@ -152,7 +152,7 @@ namespace OrdinarioProyecto.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        //Accion que nos permite verificar si nuestro proveedor existe
         private bool ProveedoreExists(int id)
         {
           return _context.Proveedores.Any(e => e.Id == id);
