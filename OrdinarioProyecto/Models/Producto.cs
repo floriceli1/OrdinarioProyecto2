@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 
 namespace OrdinarioProyecto.Models;
-
+//creacion de la clase producto
 public partial class Producto
 {
+    //Definicion de las variables que ocupa nuetra tabla producto
     public int Id { get; set; }
 
     public string? Nombre { get; set; }
