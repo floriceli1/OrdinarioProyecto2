@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OrdinarioProyecto.Models;
-
+//creacion ddl controlador de proveedores
 namespace OrdinarioProyecto.Controllers
 {
+    //cracio de la clase de nuestro controlador
     public class ProveedoresController : Controller
     {
         private readonly ProyectoContext _context;
