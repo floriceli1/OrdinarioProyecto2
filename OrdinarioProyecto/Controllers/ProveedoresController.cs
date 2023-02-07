@@ -133,7 +133,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(proveedore);
         }
-
+        //Accion que nos ayuda a confirmar, si se quiere eliminar el proveedor
         // POST: Proveedores/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
