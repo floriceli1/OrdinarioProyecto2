@@ -12,8 +12,9 @@ namespace OrdinarioProyecto.Controllers
     //creacio de la clase de nuestro controlador
     public class UsuariosController : Controller
     {
-        private readonly ProyectoContext _context;
 
+        private readonly ProyectoContext _context;
+        //Clase que nos permite utilizar context
         public UsuariosController(ProyectoContext context)
         {
             _context = context;
