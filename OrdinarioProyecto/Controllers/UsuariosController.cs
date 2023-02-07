@@ -6,9 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OrdinarioProyecto.Models;
-
+//creacion ddl controlador de usuarios
 namespace OrdinarioProyecto.Controllers
 {
+    //creacio de la clase de nuestro controlador
     public class UsuariosController : Controller
     {
         private readonly ProyectoContext _context;
