@@ -9,6 +9,7 @@ using OrdinarioProyecto.Models;
 //creacion ddl controlador de productos
 namespace OrdinarioProyecto.Controllers
 {
+    //creacio de la clase de nuestro controlador
     public class ProductoesController : Controller
     {
         private readonly ProyectoContext _context;
