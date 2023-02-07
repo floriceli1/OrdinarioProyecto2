@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Nombre:ProyectoContext.cs
+//Fecha de creacion: 08/02/22
+//Creador:Floriceli Gonzalez Ruiz
+//Descripcion:context del proyecto
+
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
