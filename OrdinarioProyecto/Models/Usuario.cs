@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Nombre:Usuario.cs
+//Fecha de creacion: 08/02/22
+//Creador:Floriceli Gonzalez Ruiz
+//Descripcion:modelo del usuario
+
+
+using System;
 using System.Collections.Generic;
 
 namespace OrdinarioProyecto.Models;

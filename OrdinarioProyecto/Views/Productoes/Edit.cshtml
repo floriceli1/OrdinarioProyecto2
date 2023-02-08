@@ -1,4 +1,9 @@
-﻿@model OrdinarioProyecto.Models.Producto
+﻿<!--Nombre: Edit.cshtml-->
+<!--Fecha de creacion: 08/02/22-->
+<!--Creador: Floriceli Gonzalez Ruiz-->
+<!--Descripcion: producto edit-->
+
+@model OrdinarioProyecto.Models.Producto
 
 @{
     ViewData["Title"] = "Edit";
@@ -50,7 +55,7 @@
 <div">
     <a class="btn btn-primary" asp-action="Index">Volver a la lista</a>
     </div>
-
+    <!--fin del formulario-->
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

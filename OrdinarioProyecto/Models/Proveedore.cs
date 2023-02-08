@@ -1,4 +1,10 @@
-﻿using System;
+﻿//Nombre:Proveedore.cs
+//Fecha de creacion: 08/02/22
+//Creador:Floriceli Gonzalez Ruiz
+//Descripcion:modelo proveedores
+
+
+using System;
 using System.Collections.Generic;
 
 namespace OrdinarioProyecto.Models;
