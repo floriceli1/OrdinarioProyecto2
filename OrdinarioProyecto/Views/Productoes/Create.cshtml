@@ -1,9 +1,15 @@
-﻿@model OrdinarioProyecto.Models.Producto
+﻿<!--Nombre: Create.cshtml-->
+<!--Fecha de creacion: 08/02/22-->
+<!--Creador: Floriceli Gonzalez Ruiz-->
+<!--Descripcion: producto create-->
+
+@model OrdinarioProyecto.Models.Producto
 
 @{
     ViewData["Title"] = "Create";
 }
-
+<!--Creacion del formulario create-->
+<!--Inicio del formulario-->
 <hr />
 <section class="d-flex justify-content-center">
     <div class="card border-primary bg-dark text-white  col-sm-6 p-3">
@@ -49,6 +55,7 @@
 <div>
     <a class="btn btn-primary" asp-action="Index">Volver a la lista</a>
 </div>
+<!--fin del formulario-->
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

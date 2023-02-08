@@ -6,24 +6,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OrdinarioProyecto.Models;
-
+//creacion ddl controlador de proveedores
 namespace OrdinarioProyecto.Controllers
 {
+    //creacio de la clase de nuestro controlador
     public class ProveedoresController : Controller
     {
         private readonly ProyectoContext _context;
-
+        //Clase que nos permite utilizar context
         public ProveedoresController(ProyectoContext context)
         {
             _context = context;
         }
-
+        //Accion que me permite direccionarme al documento index
         // GET: Proveedores
         public async Task<IActionResult> Index()
         {
               return View(await _context.Proveedores.ToListAsync());
         }
-
+        //Accion que nos ayuda a ver los detalles de su persona especifica
         // GET: Proveedores/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -41,13 +42,13 @@ namespace OrdinarioProyecto.Controllers
 
             return View(proveedore);
         }
-
+        //Accion que nos manda a la pagina crear para crear un proveedor
         // GET: Proveedores/Create
         public IActionResult Create()
         {
             return View();
         }
-
+        //Accion que nos ayuda a crear nuestro proveedor
         // POST: Proveedores/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -63,7 +64,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(proveedore);
         }
-
+        //Accion que nos ayuda a dar direccion y modificacion de nuestro proveedor
         // GET: Proveedores/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -79,7 +80,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(proveedore);
         }
-
+        //Accion que nos ayuda a editar nuestro proveedor
         // POST: Proveedores/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -114,7 +115,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(proveedore);
         }
-
+        //Accion que nos permite eliminar nuestro proveedor
         // GET: Proveedores/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -132,7 +133,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(proveedore);
         }
-
+        //Accion que nos ayuda a confirmar, si se quiere eliminar el proveedor
         // POST: Proveedores/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -151,7 +152,7 @@ namespace OrdinarioProyecto.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        //Accion que nos permite verificar si nuestro proveedor existe
         private bool ProveedoreExists(int id)
         {
           return _context.Proveedores.Any(e => e.Id == id);

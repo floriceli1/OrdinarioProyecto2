@@ -6,24 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OrdinarioProyecto.Models;
-
+//creacion ddl controlador de usuarios
 namespace OrdinarioProyecto.Controllers
 {
+    //creacio de la clase de nuestro controlador
     public class UsuariosController : Controller
     {
-        private readonly ProyectoContext _context;
 
+        private readonly ProyectoContext _context;
+        //Clase que nos permite utilizar context
         public UsuariosController(ProyectoContext context)
         {
             _context = context;
         }
-
+        //Accion que me permite direccionarme al documento index
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
               return View(await _context.Usuarios.ToListAsync());
         }
-
+        //Accion que nos ayuda a ver los detalles de su persona especifica
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -41,13 +43,13 @@ namespace OrdinarioProyecto.Controllers
 
             return View(usuario);
         }
-
+        //Accion que nos manda a la pagina crear para crear un usuario
         // GET: Usuarios/Create
         public IActionResult Create()
         {
             return View();
         }
-
+        //Accion que nos ayuda a crear nuestro usuario
         // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -63,7 +65,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(usuario);
         }
-
+        //Accion que nos ayuda a dar direccion y modificacion de nuestro usuario
         // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -79,7 +81,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(usuario);
         }
-
+        //Accion que nos ayuda a editar nuestro usuario
         // POST: Usuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -114,7 +116,7 @@ namespace OrdinarioProyecto.Controllers
             }
             return View(usuario);
         }
-
+        //Accion que nos permite eliminar nuestro usuario
         // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -132,7 +134,7 @@ namespace OrdinarioProyecto.Controllers
 
             return View(usuario);
         }
-
+        //Accion que nos ayuda a confirmar, si se quiere eliminar el usuario
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -151,7 +153,7 @@ namespace OrdinarioProyecto.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        //Accion que nos permite verificar si nuestro usuario existe
         private bool UsuarioExists(int id)
         {
           return _context.Usuarios.Any(e => e.Id == id);
